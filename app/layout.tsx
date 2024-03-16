@@ -2,6 +2,10 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 
+
+import SideBar from "./components/SideBar"
+import Bar from "./components/Bar"
+
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -19,10 +23,11 @@ export default function RootLayout({
             <body className={inter.className}>
         <div className="grid grid-cols-12 gap-6 my-14 lg:px-48 px-5">
           <div className="lg:col-span-3 bg-white rounded-2xl col-span-12 text-center">
-             Sidebar
+             <SideBar />
           </div>
           <div className="lg:col-span-9 bg-white rounded-2xl col-span-12 text-center">
-              {children}
+              <Bar />
+              {/* {children} */}
           </div>
         </div>
       </body>
