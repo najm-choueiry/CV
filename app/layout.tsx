@@ -17,11 +17,11 @@ export default function RootLayout({
   return (
     <html lang="en">
             <body className={inter.className}>
-        <div className="grid grid-cols-12 gap-6 bg-white">
-          <div className="col-span-3 bg-white">
+        <div className="grid grid-cols-12 gap-6 my-14 lg:px-48 px-5">
+          <div className="lg:col-span-3 bg-white rounded-2xl col-span-12 text-center">
              Sidebar
           </div>
-          <div className="col-span-9 bg-white">
+          <div className="lg:col-span-9 bg-white rounded-2xl col-span-12 text-center">
               {children}
           </div>
         </div>
