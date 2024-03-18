@@ -27,18 +27,24 @@ const SideBar = () => {
           <FaLinkedin  className="w-8 h-8 cursor-pointer"/>
         </a>
         </div>
-        <div id="address" > 
+        <div id="address" className="my-5 py-4 bg-gray-200"> 
             <div>
-                <div className="flex gap-4">
+                <div className="flex gap-4 justify-center">
                 <GoLocation className="mt-1"/> 
                     <p> Beirut, Lebanon</p>
                 </div>
-                <p> najmchoueiry1@gmail.com </p>
-                <p> 00961 71 994 775 </p>
+                <p  className="my-2"> najmchoueiry1@gmail.com </p>
+                <p className="my-2"> +961 71 994 775 </p>
             </div>
             <div className="flex flex-col">
-              <button> Email me!</button>
-              <button> Toggle Theme</button>
+              <button 
+                className="bg-gradient-to-r from-green-200 to-blue-200 w=8/12 rounded-full py-2 px-5 text-black my-2 mx-12"> 
+                  Email me!
+              </button>
+              <button 
+                className="bg-gradient-to-r from-green-200 to-blue-200 w=8/12 rounded-full py-2 px-5 text-black my-2 mx-12"> 
+                  Toggle Theme
+              </button>
             </div>
         </div>
       </div>

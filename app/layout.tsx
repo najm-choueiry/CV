@@ -22,7 +22,7 @@ export default function RootLayout({
     <html lang="en">
             <body className={inter.className}>
         <div className="grid grid-cols-12 gap-6 my-14 lg:px-48 px-5">
-          <div className="lg:col-span-3 bg-white rounded-2xl col-span-12 text-center">
+          <div className="lg:col-span-3 bg-white rounded-2xl col-span-12 text-center p-4">
              <SideBar />
           </div>
           <div className="lg:col-span-9 bg-white rounded-2xl col-span-12 text-center">
