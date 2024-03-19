@@ -1,38 +1,26 @@
 'use client'
-
-import { useState } from "react";
+ 
 import Link from "next/link";
-
+import { usePathname } from 'next/navigation'
+ 
 const Navbar = () => {
-  const [activeItem, setActiveItem] = useState<string>("");
-
-  const handleItemClick = (item: string) => {
-    setActiveItem(item);
-  };
-
-  return (
-    <div>
-      <span className="font-bold text-gray-500">{activeItem}</span>
-      <div className="font-lg flex space-x-3">
-        {activeItem !== "About" && (
-          <Link href="/" onClick={() => handleItemClick("About")}> About </Link>
-        )}
-
-        {activeItem !== "Projects" && (
-          <Link href="/projects" onClick={() => handleItemClick("Projects")} >
-                Projects
-          
-          </Link>
-        )}
-
-        {activeItem !== "Resume" && (
-          <Link href="/resume" onClick={() => handleItemClick("Resume")}>
-            Resume
-          </Link>
-        )}
-      </div>
-    </div>
-  );
-};
-
-export default Navbar;
+    const pathname = usePathname().slice(1);
+    return (
+        <div>
+            <span className="font-bold text-gray-500">{pathname}</span>
+            <div className="font-lg flex space-x-3">
+                <Link href="/" className={`${pathname === 'about' ? 'bg-gray-400 text-white' : 'bg-white text-place'}`}> 
+                    About 
+                </Link>
+                <Link href="/projects" className={`${pathname === 'projects' ? 'bg-gray-400 text-white' : 'bg-white text-place'}`}>
+                    Projects
+                </Link>
+                <Link href="/resume" className={`${pathname === 'resume' ? 'bg-gray-400 text-white' : 'bg-white text-place'}`}>
+                    Resume
+                </Link>
+            </div>
+        </div>
+      );
+    };
+     
+    export default Navbar;
