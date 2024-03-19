@@ -5,6 +5,7 @@ import "./globals.css";
 
 import SideBar from "./components/SideBar"
 import Bar from "./components/Bar"
+import Navbar from "./components/Navbar";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -25,7 +26,8 @@ export default function RootLayout({
           <div className="lg:col-span-3 bg-white rounded-2xl col-span-12 text-center p-4">
              <SideBar />
           </div>
-          <div className="lg:col-span-9 bg-white rounded-2xl col-span-12 text-center">
+          <div className="lg:col-span-9 bg-white rounded-2xl col-span-12 text-center flex flex-col">
+              <Navbar />
               <Bar />
               {/* {children} */}
           </div>
