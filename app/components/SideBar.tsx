@@ -1,9 +1,19 @@
+'use client'
+
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { GoLocation } from "react-icons/go";
 import { GiTie } from "react-icons/gi";
 
+import { useState } from 'react'
 
 const SideBar = () => {
+
+  // const [isEmailButtonClicked, setIsEmailButtonClicked] = useState(false);
+
+  const handleEmailButtonClick = () => {
+    alert("Hello");
+  };
+
     return (
       <div >
         <img 
@@ -38,7 +48,10 @@ const SideBar = () => {
             </div>
             <div className="flex flex-col">
               <button 
-                className="bg-gradient-to-r from-green-200 to-blue-200 w=8/12 rounded-full py-2 px-5 text-black my-2 mx-12"> 
+                className="bg-gradient-to-r from-green-200 to-blue-200 w=8/12 rounded-full py-2 px-5 text-black my-2 mx-12"
+                onClick={handleEmailButtonClick}
+                // disabled={isEmailButtonClicked} 
+                > 
                   Email me!
               </button>
               <button 
