@@ -1,3 +1,5 @@
+'use client'
+
 import { useState } from "react"
 import Link from "next/link"
 
@@ -7,15 +9,13 @@ const Navbar = () => {
 
   return (
     <div>
-        <span>{activeItem}</span>
+        <span className="font-bold text-gray-200">{activeItem}</span>
         <div>
             {
                 activeItem !== 'About' && 
                 (
                     <Link href="/">
-                <a>
                     <span>About</span>
-                </a>
             </Link>
                 )
             }
@@ -24,9 +24,7 @@ const Navbar = () => {
                 activeItem !== 'Projects' && 
                 (
                     <Link href="/projects">
-                <a>
                     <span>Projects</span>
-                </a>
             </Link>
                 )
             }
@@ -35,9 +33,7 @@ const Navbar = () => {
                 activeItem !== 'Resume' && 
                 (
                     <Link href="/resume">
-                <a>
                     <span>Resume</span>
-                </a>
             </Link>
                 )
             }
