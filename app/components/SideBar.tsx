@@ -4,14 +4,13 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { GoLocation } from "react-icons/go";
 import { GiTie } from "react-icons/gi";
 
-import { useState } from 'react'
 
 const SideBar = () => {
 
   // const [isEmailButtonClicked, setIsEmailButtonClicked] = useState(false);
 
   const handleEmailButtonClick = () => {
-    alert("Hello");
+    window.open("mailto:najmchoueiry1@gmail.com");
   };
 
     return (
